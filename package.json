@@ -1,0 +1,24 @@
+{
+  "name": "csv-extractor",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Webservice for extrating CSV data atoms and putting them on a message bus.",
+  "repository": "https://github.com/menome",
+  "license": "Commercial",
+  "dependencies": {
+    "@menome/botframework": "^2.1.7",
+    "csvtojson": "^2.0.8"
+  },
+  "devDependencies": {
+    "mocha": "^5.1.1",
+    "chai": "^4.1.0",
+    "nodemon": "^1.18.4",
+    "mock-require": "^2.0.1"
+  },
+  "scripts": {
+    "start": "[ \"$NODE_ENV\" = \"production\" ] && npm run prod || npm run dev",
+    "dev": "node ./node_modules/nodemon/bin/nodemon.js app/index.js",
+    "prod": "./node_modules/forever/bin/forever --minUptime 5000 --spinSleepTime 1000 app/index.js",
+    "test": "./node_modules/mocha/bin/mocha -C test"
+  }
+}
