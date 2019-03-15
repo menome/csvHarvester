@@ -1,14 +1,14 @@
 {
     "port": 3019,
     "rabbit_outgoing": {
-      "url": "amqp://rabbitmq:CodaGlenBaronyMonk@localhost:5672?heartbeat=3600",
+      "url": "amqp://rabbitmq:CodaGlenBaronyMonk@10.2.10.167:5672?heartbeat=3600",
       "routingKey": "syncevents.harvester.updates.csv",
       "exchange": "syncevents",
       "exchangeType": "topic"
     },
     "librarian": {
       "enable": true,
-      "host": "http://localhost:3020",
+      "host": "http://10.2.10.167:3020",
       "username": "botuser",
       "password": "CodaGlenBaronyMonk"
     }
