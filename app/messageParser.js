@@ -19,7 +19,7 @@ module.exports = function(bot) {
                 res.status(200).send("Extracting csv data.");
                 for (i = 0; i < jsonObj.length; i++) {
                     msg=require('../models/' + model).transform(jsonObj[i]);
-                    outQueue.publishMessage(msg, "csvHarvesterMessage");
+                    outQueue.publishMessage(msg, "harvesterMessage");
                 } 
             })
         }else{

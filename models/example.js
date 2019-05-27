@@ -4,23 +4,23 @@ module.exports = {
   
   function transform(itm){
     return {
-      "Name": itm.hello,
-      "NodeType":"fart",
-      "SourceSystem": "CSV-Harvester",
+      "Name": itm.name,
+      "NodeType":"Person",
+      "SourceSystem": "CSVHarvester",
       "Priority": 1,
       "ConformedDimensions": {
-        "id": itm.time
+        "Code": itm.code
       },
       "Properties": {
 
       },
       "Connections":[
         {
-          "NodeType": "Section",
+          "NodeType": "Skill",
           "RelType": "IN_SECTION",
           "ForwardRel": true,
           "ConformedDimensions": {
-            "sectionId": itm.fart
+            "sectionId": itm.skill
           },
           "Properties": {
 
