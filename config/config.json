@@ -1,7 +1,7 @@
 {
     "port": 3019,
     "rabbit_outgoing": {
-      "url": "amqp://rabbitmq:rabbitmq@localhost:5672?heartbeat=3600",
+      "url": "amqp://rabbitmq:CodaGlenBaronyMonk@localhost:5672?heartbeat=3600",
       "routingKey": "syncevents.harvester.updates.csv",
       "exchange": "syncevents",
       "exchangeType": "topic"
