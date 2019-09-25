@@ -10,7 +10,7 @@ module.exports = {
       doc: "The URL of the rabbitmq endpoint. ",
       format: String,
       default: "amqp://rabbitmq:rabbitmq@rabbit:5672?heartbeat=3600",
-      env: "RABBIT_OUTGOING_URL",
+      env: "RABBIT_URL",
       sensitive: true
     },
     routingKey: {

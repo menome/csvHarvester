@@ -19,7 +19,7 @@ module.exports = function(bot) {
                 res.status(200).send("Extracting csv data.");
                 for (i = 0; i < jsonObj.length; i++) {
                     let msg=transform.transform(jsonObj[i]);
-                    console.log(JSON.stringify(msg));
+                   // console.log(JSON.stringify(msg));
                     while(!outQueue.publishMessage(msg, "harvesterMessage")) {
                         // Sorry
                         await new Promise(resolve=>{
