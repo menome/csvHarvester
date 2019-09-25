@@ -13,14 +13,19 @@ module.exports = function(bot) {
 
         //if library is 'local' don't use librarian pull off disk
         if(library = 'local'){
-            
+            let transform = require('../models/' + model)
             csv().fromFile("local/" + path)
-            .then((jsonObj)=>{
+            .then(async (jsonObj)=>{
                 res.status(200).send("Extracting csv data.");
                 for (i = 0; i < jsonObj.length; i++) {
-                    msg=require('../models/' + model).transform(jsonObj[i]);
-                    console.log(msg);
-                    outQueue.publishMessage(msg, "harvesterMessage");
+                    let msg=transform.transform(jsonObj[i]);
+                    console.log(JSON.stringify(msg));
+                    while(!outQueue.publishMessage(msg, "harvesterMessage")) {
+                        // Sorry
+                        await new Promise(resolve=>{
+                            setTimeout(resolve,1000)
+                        })
+                    }
                 } 
             })
         }else{
