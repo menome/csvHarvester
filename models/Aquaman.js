@@ -9,7 +9,8 @@ module.exports = {
       "SourceSystem": "CSVHarvester_Aquaman.csv",
       "Priority": 1,
       "ConformedDimensions": {
-        "ExternalID": itm.Material
+        "SourceSystem": "CSVHarvester_Aquaman.csv",
+        "Material": itm.Material
       },
       "Properties": {
         "Description": itm.Description,

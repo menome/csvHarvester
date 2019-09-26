@@ -9,6 +9,7 @@ function transform(itm){
     "SourceSystem": "CSVHarvester_CaptainAmerica.csv",
     "Priority": 1,
     "ConformedDimensions": {
+      "SourceSystem": "CSVHarvester_CaptainAmerica.csv",
       "ExternalID": itm["External ID"]
     },
     "Properties": {

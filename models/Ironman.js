@@ -6,13 +6,14 @@ module.exports = {
     return {
       "Name": itm["Material"],
       "NodeType":"Valve",
-      "SourceSystem": "CSVHarvester_Ironman",
+      "SourceSystem": "CSVHarvester_Ironman.csv",
       "Priority": 1,
       "ConformedDimensions": {
-        "ExternalID": itm["Material"]
+        "SourceSystem": "CSVHarvester_Ironman.csv",
+        "Material": itm["Material"]
       },
       "Properties": {
-        "MaterialDescription": itm["Material Description"],
+        "Text": itm["Material Description"],
         "Active":itm["Active/Inactive"],
         "Available":itm["Stock Quantity"],
         "MFRPartNumber":itm["Mfr Part Number"],

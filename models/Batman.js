@@ -9,7 +9,8 @@ function transform(itm){
     "SourceSystem": "CSVHarvester_Batman.csv",
     "Priority": 1,
     "ConformedDimensions": {
-      "ExternalID": itm.SKU
+      "SourceSystem": "CSVHarvester_Batman.csv",
+      "SKU": itm.SKU
     },
     "Properties": {
       "Text": itm.Description,
