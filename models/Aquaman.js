@@ -6,10 +6,10 @@ module.exports = {
     return {
       "Name": itm.Material,
       "NodeType":"Valve",
-      "SourceSystem": "CSVHarvester",
+      "SourceSystem": "CSVHarvester_Aquaman.csv",
       "Priority": 1,
       "ConformedDimensions": {
-        "SKU": itm.Material
+        "ExternalID": itm.Material
       },
       "Properties": {
         "Description": itm.Description,

@@ -6,15 +6,15 @@ function transform(itm){
   return {
     "Name": itm.SKU,
     "NodeType":"Valve",
-    "SourceSystem": "CSVHarvester",
+    "SourceSystem": "CSVHarvester_Batman.csv",
     "Priority": 1,
     "ConformedDimensions": {
-      "SKU": itm.SKU
+      "ExternalID": itm.SKU
     },
     "Properties": {
-      "Description": itm.Description,
+      "Text": itm.Description,
       "Available": itm["Surplus Quantity"],
-      "PartValue":itm["Value / Part ($)"],
+      "Price":itm["Value / Part ($)"],
       "TotalValue":itm.Value,
       "Turns":itm.Turns
 

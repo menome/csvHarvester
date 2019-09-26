@@ -4,15 +4,15 @@ module.exports = {
 
 function transform(itm){
   return {
-    "ExternalID": itm["External ID"],
+    "Name": itm["External ID"],
     "NodeType":"Valve",
-    "SourceSystem": "CSVHarvester",
+    "SourceSystem": "CSVHarvester_CaptainAmerica.csv",
     "Priority": 1,
     "ConformedDimensions": {
       "ExternalID": itm["External ID"]
     },
     "Properties": {
-      "ListingTitleText": itm["Listing Title additional text"],
+      "Text": itm["Listing Title additional text"],
       "ManufacturerPartNumber": itm["Manufacturer Part Number"],
       "YearBuilt":itm["Year Built"],
       "PASCConditionRating":itm["PASC Condition Rating"],
