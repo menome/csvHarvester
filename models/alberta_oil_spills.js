@@ -27,7 +27,41 @@ function transform(itm){
       "IncidentSection" : itm.IncidentSection,
       "IncidentTownship" : itm.IncidentTownship,
       "IncidentRange" : itm.IncidentRange,
-      "IncidentMeridian": itm.IncidentMeridian
+      "IncidentMeridian": itm.IncidentMeridian,
+      "IncidentNotificationDate": itm.IncidentNotificationDate,
+      "IncidentCompleteDate": itm.IncidentCompleteDate,
+      "Jurisdiction": itm.Jurisdiction,
+      "ReleaseOffsite": itm.ReleaseOffsite,
+      "SensitiveArea": itm.SensitiveArea,
+      "PublicAffected": itm.PublicAffected,
+      "EnvironmentAffected": itm.EnvironmentAffected,
+      "WildlifeLivestockAffected": itm.WildlifeLivestockAffected,
+      "AreaAffected": itm.AreaAffected,
+      "PublicEvacuatedCount": parseFloat(itm.PublicEvacuatedCount),
+      "ReleaseCleanupDate": itm.ReleaseCleanupDate,
+      "PipelineLicenceSegmentID": parseFloat(itm.PipelineLicenceSegmentID),
+      "PipelineLicenceLineNo": itm.PipelineLicenceLineNo,
+      "PipeDamageType": itm.PipeDamageType,
+      "PipeTestFailure": itm.PipeTestFailure,
+      "PipelineOutsideDiameter(mm)": parseFloat(itm.PipelineOutsideDiameter),
+      "PipeGrade": itm.PipeGrade,
+      "PipeWallThickness(mm)": parseFloat(itm.PipeWallThickness),
+      "VolumeReleased":  parseFloat(itm.VolumeReleased),
+      "VolumeRecovered": parseFloat(itm.VolumeRecovered),
+      "VolumeUnits": itm.VolumeUnits,
+      "SubstanceReleased":parseFloat(itm.SubstanceReleased2),
+      "VolumeReleased2": parseFloat(itm.VolumeReleased2),
+      "VolumeRecovered2": parseFloat(itm.VolumeRecovered2),
+      "VolumeUnits2": parseFloat(itm.VolumeUnits2),
+      "SubstanceReleased3": parseFloat( itm.SubstanceReleased3),
+      "VolumeReleased3": parseFloat(itm.VolumeReleased3),
+      "VolumeRecovered3": parseFloat( itm.VolumeRecovered3),
+      "VolumeUnits3": parseFloat(itm.VolumeUnits3),
+      "SubstanceReleased4": parseFloat( itm.SubstanceReleased4),
+      "VolumeReleased4": parseFloat(itm.VolumeReleased4),
+      "VolumeRecovered4": parseFloat( itm.VolumeRecovered4),
+      "VolumeUnits4": parseFloat(itm.VolumeUnits4),
+      "Location1": parseFloat(itm.Location1),
     },
     "Connections":[
       {
@@ -85,51 +119,77 @@ function transform(itm){
   
         }
       },
+      {
+        "NodeType": "License",
+        "RelType": "HAS_LICENSE",
+        "ForwardRel": true,
+        "ConformedDimensions": {
+          "Name": itm.LicenceNumber
+        },
+        "Properties": {
+          "LicenceType": itm.LicenceType
+        }
+      },
+      {
+        "NodeType": "Source",
+        "RelType": "SPILL_SOURCE",
+        "ForwardRel": true,
+        "ConformedDimensions": {
+          "Name": itm.Source
+        },
+        "Properties": {
+   
+        }
+      },
+      {
+        "NodeType": "StrikeArea",
+        "RelType": "SPILL_STIKE_AREA",
+        "ForwardRel": true,
+        "ConformedDimensions": {
+          "Name": itm.StrikeArea
+        },
+        "Properties": {
+   
+        }
+      },
+      {
+        "NodeType": "FieldCentre",
+        "RelType": "SPILL_FIELD_CENTER",
+        "ForwardRel": true,
+        "ConformedDimensions": {
+          "Name": itm.FieldCentre
+        },
+        "Properties": {
+   
+        }
+      },
+      {
+        "NodeType": "Company",
+        "RelType": "SPILLED",
+        "ForwardRel": true,
+        "ConformedDimensions": {
+          "LicenseeId": itm.LicenseeID.padStart(2, '0')
+        },
+        "Properties": {
+          "Name": itm.LicenseeName 
+        }
+      },
+      {
+        "NodeType": "SubstanceReleased",
+        "RelType": "RELEASED",
+        "ForwardRel": true,
+        "ConformedDimensions": {
+          "Name": itm.SubstanceReleased
+        },
+        "Properties": {
+          "Name": itm.LicenseeName 
+        }
+      },
+    
     ]
   }
 }
 
-LicenceNumber
-LicenceType
-IncidentNotificationDate
-IncidentCompleteDate
-Source
-StrikeArea
-FieldCentre
-LicenseeID
-LicenseeName
-Jurisdiction
-ReleaseOffsite
-SensitiveArea
-PublicAffected
-EnvironmentAffected
-WildlifeLivestockAffected
-AreaAffected
-PublicEvacuatedCount
-ReleaseCleanupDate
-PipelineLicenceSegmentID
-PipelineLicenceLineNo
-PipeDamageType
-PipeTestFailure
-PipelineOutsideDiameter(mm)
-PipeGrade
-PipeWallThickness(mm)
-SubstanceReleased
-VolumeReleased
-VolumeRecovered
-VolumeUnits
-SubstanceReleased2
-VolumeReleased2
-VolumeRecovered2
-VolumeUnits2
-SubstanceReleased3
-VolumeReleased3
-VolumeRecovered3
-VolumeUnits3
-SubstanceReleased4
-VolumeReleased4
-VolumeRecovered4
-VolumeUnits4
-Location1
+
 
 										
