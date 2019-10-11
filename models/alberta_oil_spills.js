@@ -6,12 +6,13 @@ function transform(itm){
   return {
     "Name": itm.SurfLoc,
     "NodeType":"Spill",
-    "SourceSystem": "CSVHarvester_Alberta_Oil_Spills_1975-2013.csv",
+    "SourceSystem": "CSVHarvester_Alberta_Oil_Spills_19752013",
     "Priority": 1,
     "ConformedDimensions": {
       "IncidentNumber":itm.IncidentNumber
     },
     "Properties": {
+      "Name": itm.IncidentNumber,
       "IncidentDate":itm.IncidentDate,
       "Latitude":itm.Latitude,
       "Longitude":itm.Longitude,
