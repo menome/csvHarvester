@@ -62,7 +62,7 @@ function transform(itm){
       "VolumeReleased4": parseFloat(itm.VolumeReleased4),
       "VolumeRecovered4": parseFloat( itm.VolumeRecovered4),
       "VolumeUnits4": parseFloat(itm.VolumeUnits4),
-      "Location1": parseFloat(itm.Location1),
+      "Location1": itm.Location1,
     },
     "Connections":[
       {
@@ -169,10 +169,10 @@ function transform(itm){
         "RelType": "SPILLED",
         "ForwardRel": true,
         "ConformedDimensions": {
-          "LicenseeId": itm.LicenseeID.padStart(2, '0')
+          "Name": itm.LicenseeName 
         },
         "Properties": {
-          "Name": itm.LicenseeName 
+          "LicenseeId": itm.LicenseeID
         }
       },
       {
