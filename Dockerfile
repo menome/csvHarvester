@@ -25,5 +25,7 @@ RUN rm -f .npmrc
 # This seems to not cause any problems in dev when we mount a volume at this point.
 COPY ./app app
 COPY ./config config
+COPY ./local local
+COPY ./models models
 
 CMD ["npm", "start"]
