@@ -2,7 +2,7 @@ module.exports = {
     transform
   } 
   function transform(itm){
-    return {
+    var msg = {
       "Name": itm["Item"] + ' ' + itm["Tag #"],
       "NodeType":itm["Item"],
       "SourceSystem": "CSVHarvester_Ironman.csv",
@@ -16,6 +16,7 @@ module.exports = {
         "Description": itm["Desription"],
         "Tag":itm["Tag #"]
       },
+      "Connections":[
         {
           "NodeType": "Type",
           "RelType": "Type",
@@ -29,4 +30,19 @@ module.exports = {
         }
       ]
     }
+    // itm["Desription"].split(",").map(function(facet){
+    //   //console.log(facet)
+    //   msg.Connections.push({
+    //       "NodeType": "Facet",
+    //       "RelType": "HAS_FACET",
+    //       "ForwardRel": true,
+    //       "ConformedDimensions": {
+    //         "Key":facet.trim().replace('"','\\"')
+    //       },
+    //       "Properties": {
+    
+    //       }
+    //     })
+    // })
+    return msg
   }
