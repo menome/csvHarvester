@@ -9,10 +9,11 @@ function transform(itm){
     "SourceSystem": "OpenAir",
     "Priority": 1,
     "ConformedDimensions": {
-        "Code": itm.Project
+        "Code": itm.ProjectID
       },
       "Properties": {
-        "Client": itm.ProjectClient
+        "Client": itm.ProjectClient,
+        "Status": itm.ProjectActive
     },
     "Connections":[
       {
@@ -20,7 +21,7 @@ function transform(itm){
         "RelType": "HAS",
         "ForwardRel": true,
         "ConformedDimensions": {
-          "Code": itm.Client
+          "Code": itm.ClientID
         },
         "Properties": {
           
@@ -31,7 +32,8 @@ function transform(itm){
           "RelType": "HAS",
           "ForwardRel": true,
           "ConformedDimensions": {
-            "Code": itm.Task
+            "Code": itm.TaskID,
+            "ProjectCode": itm.ProjectID
           },
           "Properties": {
          

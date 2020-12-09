@@ -10,8 +10,8 @@ function transform(itm){
     "Priority": 1,
     "ConformedDimensions": {
         "DateWorked": itm.Date,
-        "User": itm.User,
-        "Task": itm.Task
+        "User": itm.UserID,
+        "Task": itm.TaskID
       },
       "Properties": {
         "Notes": itm.Notes,
@@ -23,7 +23,8 @@ function transform(itm){
         "RelType": "WORKED",
         "ForwardRel": true,
         "ConformedDimensions": {
-          "Code": itm.Task
+          "Code": itm.TaskID,
+          "ProjectCode": itm.ProjectID
         },
         "Properties": {
           "Name":itm.Task

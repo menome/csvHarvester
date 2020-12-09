@@ -9,7 +9,7 @@ function transform(itm){
     "SourceSystem": "OpenAir",
     "Priority": 1,
     "ConformedDimensions": {
-        "Code": itm.Client
+        "Code": itm.ClientID
       },
       "Properties": {
         

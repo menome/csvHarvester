@@ -9,10 +9,11 @@ function transform(itm){
     "SourceSystem": "OpenAir",
     "Priority": 1,
     "ConformedDimensions": {
-        "Code": itm.Task
+        "Code": itm.TaskID,
+        "ProjectCode": itm.ProjectID
       },
       "Properties": {
-
+        "Task Manager": itm.TaskProjectManager
     },
     "Connections":[
      

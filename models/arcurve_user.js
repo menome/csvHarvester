@@ -9,7 +9,7 @@ function transform(itm){
     "SourceSystem": "OpenAir",
     "Priority": 1,
     "ConformedDimensions": {
-      "Code":itm.User
+      "Code":itm.UserID
     },
     "Properties": {
       "Department":itm.Department,
@@ -34,8 +34,8 @@ function transform(itm){
         "ForwardRel": true,
         "ConformedDimensions": {
           "DateWorked": itm.Date,
-          "User": itm.User,
-          "Task": itm.Task
+          "User": itm.UserID,
+          "Task": itm.TaskID
         },
         "Properties": {
             "Notes": itm.Notes,
