@@ -1,7 +1,7 @@
 {
   "name": "csv-extractor",
   "private": true,
-  "version": "1.1.1",
+  "version": "3.0.3",
   "description": "Webservice for extracting CSV data atoms and putting them on a message bus.",
   "repository": "https://github.com/menome",
   "license": "Commercial",
