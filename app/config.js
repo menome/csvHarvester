@@ -27,7 +27,7 @@ module.exports = {
     },
     exchangeType: {
       doc: "The type of RMQ exchange we're creating",
-      format: ["topic","fanout"],
+      format: ["topic","fanout","direct"],
       default: "topic",
       env: "RABBIT_OUTGOING_EXCHANGE_TYPE"
     },
